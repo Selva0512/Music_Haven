@@ -1,0 +1,61 @@
+name: audio_haven
+description: A mobile-first music player & voice recorder app.
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.4.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  # ── Audio playback ──────────────────────────────────────────────────────────
+  just_audio: ^0.10.5
+  audio_session: ^0.2.2
+
+  # ── Voice recording ─────────────────────────────────────────────────────────
+  record: ^6.2.0
+  path_provider: ^2.1.4
+
+  # ── Permissions ─────────────────────────────────────────────────────────────
+  permission_handler: ^12.0.1
+
+  # ── Local notifications (reminders) ────────────────────────────────────────
+  flutter_local_notifications: ^21.0.0
+  timezone: ^0.11.0
+
+  # ── Local storage — Hive with pre-generated adapters ───────────────────────
+  # models.g.dart is already committed; no build_runner needed at runtime.
+  hive_flutter: ^1.1.0
+  hive: ^2.2.3
+
+  # ── State management ────────────────────────────────────────────────────────
+  provider: ^6.1.2
+
+  # ── Animations ──────────────────────────────────────────────────────────────
+  animations: ^2.0.11
+
+  # ── Icons ───────────────────────────────────────────────────────────────────
+  cupertino_icons: ^1.0.8
+
+  # ── File picking ────────────────────────────────────────────────────────────
+  file_picker: ^10.3.10
+
+  # ── UUID generation ─────────────────────────────────────────────────────────
+  uuid: ^4.5.1
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^6.0.0
+  # ── Hive codegen (only needed if you ADD new @HiveType models) ──────────────
+  # Uncomment temporarily, run the command below, then comment out again:
+  #   flutter pub run build_runner build --delete-conflicting-outputs
+  # hive_generator: ^2.0.1
+  # build_runner: ^2.4.13
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/
